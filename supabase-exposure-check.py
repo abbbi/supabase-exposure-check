@@ -13,7 +13,7 @@ TIMEOUT = 10
 PAGE_SIZE = 1000
 OUTPUT_DIR = "output"
 
-COMMON_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; SupabaseScanner/1.0)"}
+COMMON_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible)"}
 
 JWT_REGEX = re.compile(r"eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+")
 # Standard Supabase cloud URLs
