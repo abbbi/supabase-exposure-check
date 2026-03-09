@@ -541,9 +541,10 @@ def scan_site(site_url):
             rows, status = dump_table(base_url, table, supabase_headers)
 
             if status == 200:
-                path = os.path.join(tables_dir, f"{table}.json")
-                with open(path, "w") as f:
-                    json.dump(rows, f, indent=2)
+                if len(rows) != 0:
+                    path = os.path.join(tables_dir, f"{table}.json")
+                    with open(path, "w") as f:
+                        json.dump(rows, f, indent=2)
 
                 # Analyze for sensitive data
                 analysis = analyze_table_for_sensitive_data(rows)
